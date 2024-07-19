@@ -85,13 +85,25 @@ WSGI_APPLICATION = 'Project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'test_db',
+#         'USER': 'root',
+#         'PASSWORD': 'Vivek@raj09',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test_db',
-        'USER': 'root',
-        'PASSWORD': 'Vivek@raj09',
-        'HOST': '127.0.0.1',
+        'NAME': 'tweet',
+        'USER': 'admin',
+        'PASSWORD': 'adminroot',
+        'HOST': 'database-1.c3a48ckacj21.ap-south-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
