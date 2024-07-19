@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+    .register-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+       /* background-color: #00171f;  Light gray background */
+        padding: 1rem;
+    }
+    .register-box {
+        width: 100%;
+        max-width: 400px;
+        padding: 2rem;
+        background-color: #00171f; /* White background */
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .register-box h2 {
+        font-size: 2rem;
+        color: #111827; /* Dark gray text */
+        margin-bottom: 1.5rem;
+    }
+    .register-box form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .register-box button {
+        padding: 0.75rem;
+        background-color: #3b82f6; /* Blue background */
+        color: #ffffff; /* White text */
+        border: black;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .register-box button:hover {
+        background-color: #2563eb; /* Darker blue on hover */
+    }
+    .register-box p {
+        color: #ffffff; /* Medium gray text */
+        margin-top: 1rem;
+    }
+    .register-box a {
+        color: #3b82f6; /* Blue text */
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .register-box a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="register-container">
+    <div class="register-box">
+        <h2>Register</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </div>
+</div>
+{% endblock %}
