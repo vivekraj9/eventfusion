@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-9vp@d9o)u-0i4&-(=-1=ly$y661shi%^(albjz-owr0ti-icj(
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'eventfusion-3.onrender.com'
+    '*'
 ]
 
 
